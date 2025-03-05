@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    </head>
+    <body>
+        <form>
+            <h1>Login</h1>
+            <div class="textBoxdiv">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="text" placeholder="Email ID" required>
+            </div>
+            <div class="textBoxdiv">
+                <i class="fa-solid fa-key"></i>
+                <input type="password" placeholder="password" id="myInput" required>
+                <span class="eye" onclick="myFunction()">
+                    <i id="hide2" class="fa-solid fa-eye-slash"></i>
+                    <i id="hide1" class="fa-solid fa-eye"></i>
+                </span>
+            </div>
+            <input type="submit" value="Login" class="loginBtn">
+            <div class="singup">
+                Don't have an account ?
+                </br>
+                <a href="Login2.html">Sign up</a>
+            </div>
+        </form>
+
+        <script>
+            function myFunction(){
+                var x=document.getElementById("myInput")
+                var y=document.getElementById("hide1")
+                var z=document.getElementById("hide2")
+
+                if(x.type === 'password'){
+                    x.type="text";
+                    y.style.display="block";
+                    z.style.display="none";
+                }
+                else{
+                    x.type="password";
+                    y.style.display="none";
+                    z.style.display="block";  
+                }
+            } 
+        </script>
+    </body>
+</html>
